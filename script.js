@@ -1,5 +1,6 @@
 const profileObject = "myProfile";
 const profileName = "name";
+const profileVideo = "videoURL";
 const profileDescription = "description";
 const profileLocation = "location";
 const about = "about";
@@ -16,7 +17,7 @@ const projectsArray = "myProjects";
 async function loadJson() {
   const response = await fetch("db.json");
   const jsonObj = await response.json();
-  const myProfile = jsonObj.myProfile;
+  const userProfile = jsonObj[profileObject];
 
   // Profile Name
   const profileElement = document.querySelector('[data-name="profile-name"]');
@@ -28,7 +29,7 @@ async function loadJson() {
 
   // Video
   const videoElement = document.querySelector('[data-id="profile-video"]');
-  videoElement.innerHTML = `<video class="w-64 rounded" src="${jsonObj["myProfile"]["videoURL"]}" controls muted autoplay></video>`;
+  videoElement.innerHTML = `<video class="w-64 rounded" src="${jsonObj[profileObject][profileVideo]}" controls muted autoplay></video>`;
 
   // Location
   const profile_Location = document.querySelector(
@@ -43,7 +44,7 @@ async function loadJson() {
   aboutElement.innerHTML = jsonObj[profileObject][about];
 
   // Appending Buttons
-  for (let i = 0; i < myProfile.skills.length; i++) {
+  for (let i = 0; i < userProfile[skillsArray].length; i++) {
     const skills_object = jsonObj[profileObject][skillsArray][i];
     const title = skills_object[skillsTitle];
     const address = skills_object[skillsImg];
@@ -53,7 +54,7 @@ async function loadJson() {
   }
 
   // Appending Education
-  for (let i = 0; i < myProfile.education.length; i++) {
+  for (let i = 0; i < userProfile[educationArray].length; i++) {
     const eduObject = jsonObj[profileObject][educationArray][i];
     const institute = eduObject[educationInstitute];
     const year = eduObject[educationYear];
