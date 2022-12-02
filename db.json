@@ -1,0 +1,83 @@
+{
+  "myProfile": {
+    "name": "Muhammmad Yasir Aziz",
+    "education": [
+      {
+        "institute": "Pakistan Institute of Engineering and Applied Sciences, Islamabad",
+        "year": "2018-2022",
+        "degree": "BS in Computer and Information Sciences (BS CIS)"
+      }
+    ],
+    "about": "I have done web development certification from udemy and I have worked on a variety of projects that allowed me to put what I had learned from the certification. Recently I have also worked on project which was Info System that can handle workloads of employees. Till now, I have done three months onsite internship from Allied Consultants I have almost 6 months hands on experience in front-end development. The tech stack includes tailwind and react js. So now, I am looking forward to a job to gain experience in web development industry.",
+    "videoURL": "video/videoplayback.mp4",
+    "description": "An enthusiast programmer, having expertise in front-end development and 6 months hands on experience in front-end development.",
+    "location": "Lahore, Pakistan",
+    "skills": [
+      {
+        "title": "HTML",
+        "details": ["HTML Tutorial", "HTML Graphics", "HTML Forms"],
+        "address": "imgs/html.png"
+      },
+      {
+        "title": "CSS",
+        "details": [
+          "Specificity",
+          "Inheritance",
+          "Box model",
+          "Stacking",
+          "Element Positioning",
+          "Form Styling",
+          "Typography"
+        ],
+        "address": "imgs/css.png"
+      },
+      {
+        "title": "Tailwind",
+        "details": [
+          "A utility-first CSS framework packed with classes like flex , pt-4 , text-center and rotate-90 that can be composed to build any design, directly in your markup",
+          "Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables. Instead, it creates a list of CSS classes that can be used to style each element by mixing and matching"
+        ],
+        "address": "imgs/tailwind.png"
+      },
+      {
+        "title": "Javascript",
+        "details": [
+          "Conditional statements",
+          "Functions and Function Calls",
+          "Events and Event Handling",
+          "Traversing the DOM ",
+          "Expression vs Statement",
+          "Message Queue",
+          "JavaScript Engine",
+          "DOM and Layout Trees",
+          "Factories and Classes"
+        ],
+        "address": "imgs/js.png"
+      },
+      {
+        "title": "ReactJS",
+        "details": [
+          "ReactJS JSX",
+          "ReactJS Rendering Elements",
+          "ReactJS Components",
+          "ReactJS Props",
+          "ReactJS State",
+          "ReactJS Lifecycle of Components"
+        ],
+        "address": "imgs/react.png"
+      }
+    ],
+    "myProjects": [
+      {
+        "title": "Information System for Visiting Faculty at PIEAS",
+        "date": "09/2021 to 08/2022",
+        "description": "Developed a responsive front-end of the information using Bootstrap and ReactJS that can calculate Workload of each employee in each semester. Payment of Visiting Faculty and TAs in each semester."
+      },
+      {
+        "title": "Web Based Quiz Application",
+        "date": "03/2021 to 04/2021",
+        "description": "A dynamic website which offers students to attend quizzes created by their teachers, developed in ReactJS."
+      }
+    ]
+  }
+}
