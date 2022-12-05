@@ -19,31 +19,36 @@ async function loadJson() {
   const jsonObj = await response.json();
   const userProfile = jsonObj[profileObject];
 
-  // Profile Name
-  const profileElement = document.querySelector('[data-name="profile-name"]');
-  profileElement.innerHTML = jsonObj[profileObject][profileName];
+  const profileElement = document.querySelectorAll("[data-id]");
 
-  // Description
-  const descElement = document.querySelector('[data-id="profile-description"]');
-  descElement.innerHTML = jsonObj[profileObject][profileDescription];
+  profileElement.forEach((element) => {
+    switch (element.dataset.id) {
+      case "profile-name":
+        element.innerHTML = jsonObj[profileObject][profileName];
+        break;
 
-  // Video
-  const videoElement = document.querySelector('[data-id="profile-video"]');
-  videoElement.innerHTML = `<video class="w-64 rounded" src="${jsonObj[profileObject][profileVideo]}" controls muted autoplay></video>`;
+      case "profile-description":
+        element.innerHTML = jsonObj[profileObject][profileDescription];
+        break;
 
-  // Location
-  const profile_Location = document.querySelector(
-    '[data-id="profile-location"]'
-  );
-  profile_Location.innerHTML =
-    `<i class="fa fa-location-arrow"></i> &nbsp` +
-    jsonObj[profileObject][profileLocation];
+      case "profile-about":
+        element.innerHTML = jsonObj[profileObject][about];
+        break;
 
-  // About
-  const aboutElement = document.querySelector('[data-id="profile-about"]');
-  aboutElement.innerHTML = jsonObj[profileObject][about];
+      case "profile-video":
+        element.innerHTML = `<video class="w-64 rounded" src="${jsonObj[profileObject][profileVideo]}" controls muted autoplay></video>`;
+        break;
+      case "profile-location":
+        element.innerHTML =
+          `<i class="fa fa-location-arrow"></i> &nbsp` +
+          jsonObj[profileObject][profileLocation];
 
-  // Appending Buttons
+      default:
+        break;
+    }
+  });
+
+  // Appending Skill Buttons
   for (let i = 0; i < userProfile[skillsArray].length; i++) {
     const skills_object = jsonObj[profileObject][skillsArray][i];
     const title = skills_object[skillsTitle];
@@ -64,6 +69,7 @@ async function loadJson() {
     document.getElementById("degree").innerHTML = degree;
     document.getElementById("year").innerHTML = year;
   }
+
   // Appending Projects
   const projects = jsonObj[profileObject][projectsArray];
   expandProject(projects);
