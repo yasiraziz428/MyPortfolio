@@ -15,32 +15,45 @@
     "skills": [
       {
         "title": "HTML",
-        "details": ["HTML Tutorial", "HTML Graphics", "HTML Forms"],
+        "details": ["Semantic HTML", "Forms and Validations", "SEO"],
         "address": "imgs/html.png"
       },
       {
         "title": "CSS",
         "details": [
-          "Specificity",
-          "Inheritance",
-          "Box model",
-          "Stacking",
-          "Element Positioning",
-          "Form Styling",
-          "Typography"
+          "Layouts",
+          "Responsive UI",
+          "Flexbox",
+          "Positioning",
+          "Media Queries"
         ],
         "address": "imgs/css.png"
       },
       {
         "title": "Tailwind",
-        "details": [
-          "A utility-first CSS framework packed with classes like flex , pt-4 , text-center and rotate-90 that can be composed to build any design, directly in your markup",
-          "Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables. Instead, it creates a list of CSS classes that can be used to style each element by mixing and matching"
-        ],
+        "details": [],
         "address": "imgs/tailwind.png"
       },
       {
-        "title": "Javascript",
+        "title": "Bootstrap",
+        "details": [],
+        "address": "imgs/bootstrap.png"
+      },
+      {
+        "title": "JavaScript",
+        "details": [
+          "Events and Event Handling",
+          "DOM & its Manipulation ",
+          "EcmaScript 6",
+          "Hoisting",
+          "Temporal Dead Zone",
+          "JavaScript Engine",
+          "Fetch API"
+        ],
+        "address": "imgs/js.png"
+      },
+      {
+        "title": "Version Control",
         "details": [
           "Conditional statements",
           "Functions and Function Calls",
@@ -52,19 +65,12 @@
           "DOM and Layout Trees",
           "Factories and Classes"
         ],
-        "address": "imgs/js.png"
+        "address": "imgs/git.png"
       },
       {
-        "title": "ReactJS",
-        "details": [
-          "ReactJS JSX",
-          "ReactJS Rendering Elements",
-          "ReactJS Components",
-          "ReactJS Props",
-          "ReactJS State",
-          "ReactJS Lifecycle of Components"
-        ],
-        "address": "imgs/react.png"
+        "title": "Frameworks",
+        "details": ["jQuery", "ReactJS"],
+        "address": "imgs/framework.png"
       }
     ],
     "myProjects": [
@@ -76,7 +82,12 @@
       {
         "title": "Web Based Quiz Application",
         "date": "03/2021 to 04/2021",
-        "description": "A dynamic website which offers students to attend quizzes created by their teachers, developed in ReactJS."
+        "description": "A dynamic website which offers students to attend quizzes created by their teachers, developed in JavaScript."
+      },
+      {
+        "title": "My Personal Portfolio",
+        "date": "03/2021 to 04/2021",
+        "description": "A website that is my portfolio, developed using javascript and the backend is in json format."
       }
     ]
   }

@@ -36,41 +36,37 @@ async function loadJson() {
         break;
 
       case "profile-video":
-        element.innerHTML = `<video class="w-64 rounded" src="${jsonObj[profileObject][profileVideo]}" controls muted autoplay></video>`;
+        element.setAttribute("src", jsonObj[profileObject][profileVideo]);
         break;
       case "profile-location":
-        element.innerHTML =
-          `<i class="fa fa-location-arrow"></i> &nbsp` +
-          jsonObj[profileObject][profileLocation];
+        element.innerHTML = jsonObj[profileObject][profileLocation];
+        break;
 
-      default:
+      // Appending Skill Buttons
+      case "skill-section":
+        for (let i = 0; i < userProfile[skillsArray].length; i++) {
+          const skills_object = jsonObj[profileObject][skillsArray][i];
+          createButton(element, skills_object);
+        }
+        break;
+
+      // Appending Projects
+      case "projects-section":
+        const projects = jsonObj[profileObject][projectsArray];
+        expandProject(projects);
+        break;
+
+      // Appending Education
+      case "profile-education":
+        for (let i = 0; i < userProfile[educationArray].length; i++) {
+          const eduObject = jsonObj[profileObject][educationArray][i];
+          const institute = eduObject[educationInstitute];
+          const year = eduObject[educationYear];
+          const degree = eduObject[educationDegree];
+
+          element.innerHTML = degree + "<br>" + institute + "<br>" + year;
+        }
         break;
     }
   });
-
-  // Appending Skill Buttons
-  for (let i = 0; i < userProfile[skillsArray].length; i++) {
-    const skills_object = jsonObj[profileObject][skillsArray][i];
-    const title = skills_object[skillsTitle];
-    const address = skills_object[skillsImg];
-    const details = skills_object[skillsDetails];
-
-    createButton(title, details, address);
-  }
-
-  // Appending Education
-  for (let i = 0; i < userProfile[educationArray].length; i++) {
-    const eduObject = jsonObj[profileObject][educationArray][i];
-    const institute = eduObject[educationInstitute];
-    const year = eduObject[educationYear];
-    const degree = eduObject[educationDegree];
-
-    document.getElementById("institute").innerHTML = institute;
-    document.getElementById("degree").innerHTML = degree;
-    document.getElementById("year").innerHTML = year;
-  }
-
-  // Appending Projects
-  const projects = jsonObj[profileObject][projectsArray];
-  expandProject(projects);
 }

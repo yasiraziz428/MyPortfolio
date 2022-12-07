@@ -1,4 +1,8 @@
-async function createButton(name, details, url) {
+async function createButton(element, skills_object) {
+  const title = skills_object[skillsTitle];
+  const address = skills_object[skillsImg];
+  const details = skills_object[skillsDetails];
+
   //load html template
   const response = await fetch("templates/skill.html");
   const templateBtn = await response.text();
@@ -8,9 +12,9 @@ async function createButton(name, details, url) {
   //replace image
 
   let newHTML = templateBtn
-    .replace("##name##", name)
+    .replace("##name##", title)
     .replace("##more##", details)
-    .replace("##image##", url);
+    .replace("##image##", address);
 
-  document.querySelector('[data-id="skill-section"]').innerHTML += newHTML;
+  element.innerHTML += newHTML;
 }
