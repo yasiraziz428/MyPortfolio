@@ -44,11 +44,10 @@ async function loadJson() {
 
       // Appending Skill Buttons
       case "skill-section":
-        userProfile[skillsArray].forEach((elements, index) => {
+        userProfile[skillsArray].forEach((e, index) => {
           const skills_object = jsonObj[profileObject][skillsArray][index];
           createButton(element, skills_object);
         });
-
         break;
 
       // Appending Projects
@@ -59,14 +58,13 @@ async function loadJson() {
 
       // Appending Education
       case "profile-education":
-        for (let i = 0; i < userProfile[educationArray].length; i++) {
-          const eduObject = jsonObj[profileObject][educationArray][i];
+        userProfile[educationArray].forEach((e, index) => {
+          const eduObject = jsonObj[profileObject][educationArray][index];
           const institute = eduObject[educationInstitute];
           const year = eduObject[educationYear];
           const degree = eduObject[educationDegree];
-
           element.innerHTML = degree + "<br>" + institute + "<br>" + year;
-        }
+        });
         break;
     }
   });
