@@ -44,10 +44,11 @@ async function loadJson() {
 
       // Appending Skill Buttons
       case "skill-section":
-        for (let i = 0; i < userProfile[skillsArray].length; i++) {
-          const skills_object = jsonObj[profileObject][skillsArray][i];
+        userProfile[skillsArray].forEach((elements, index) => {
+          const skills_object = jsonObj[profileObject][skillsArray][index];
           createButton(element, skills_object);
-        }
+        });
+
         break;
 
       // Appending Projects

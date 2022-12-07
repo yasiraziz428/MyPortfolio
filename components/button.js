@@ -3,6 +3,7 @@ async function createButton(element, skills_object) {
   const address = skills_object[skillsImg];
   const details = skills_object[skillsDetails];
 
+  console.log(element);
   //load html template
   const response = await fetch("templates/skill.html");
   const templateBtn = await response.text();
