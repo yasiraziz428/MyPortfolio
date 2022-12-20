@@ -1,0 +1,84 @@
+{
+  "myProfile": {
+    "name": "Muhammmad Yasir Aziz",
+    "education": [
+      {
+        "institute": "Pakistan Institute of Engineering and Applied Sciences (PIEAS), Islamabad",
+        "year": "2018-2022",
+        "degree": "BS in Computer and Information Sciences (BS CIS)"
+      }
+    ],
+    "about": "I have done web development certification from udemy and I have worked on a variety of projects that allowed me to put what I had learned from the certification. Recently I have also worked on project which was Info System that can handle workloads of employees. Till now, I have done three months onsite internship from Allied Consultants I have almost 6 months hands on experience in front-end development. The tech stack includes tailwind and react js. So now, I am looking forward to a job to gain experience in web development industry.",
+    "videoURL": "video/videoplayback.mp4",
+    "description": "An enthusiast programmer, having expertise in front-end development and 6 months hands on experience in front-end development.",
+    "location": "Lahore, Pakistan",
+    "skills": [
+      {
+        "title": "HTML",
+        "details": ["Semantic HTML", "Forms and Validations", "SEO"],
+        "address": "imgs/html.png"
+      },
+      {
+        "title": "CSS",
+        "details": [
+          "Layouts",
+          "Responsive UI",
+          "Flexbox",
+          "Positioning",
+          "Media Queries"
+        ],
+        "address": "imgs/css.png"
+      },
+      {
+        "title": "Tailwind",
+        "details": [],
+        "address": "imgs/tailwind.png"
+      },
+      {
+        "title": "Bootstrap",
+        "details": [],
+        "address": "imgs/bootstrap.png"
+      },
+      {
+        "title": "JavaScript",
+        "details": [
+          "Events and Event Handling",
+          "DOM & its Manipulation ",
+          "EcmaScript 6",
+          "Hoisting",
+          "Temporal Dead Zone",
+          "JavaScript Engine",
+          "Fetch API"
+        ],
+        "address": "imgs/js.png"
+      },
+      {
+        "title": "Frameworks",
+        "details": ["jQuery", "ReactJS"],
+        "address": "imgs/framework.png"
+      },
+      {
+        "title": "Version Control",
+        "details": ["Github"],
+        "address": "imgs/git.png"
+      }
+    ],
+    "myProjects": [
+      {
+        "title": "Information System for Visiting Faculty at PIEAS",
+        "date": "09/2021 to 08/2022",
+        "description": "Developed a responsive front-end of the information using Bootstrap and ReactJS that can calculate Workload of each employee in each semester. Payment of Visiting Faculty and TAs in each semester."
+      },
+      {
+        "title": "Web Based Quiz Application",
+        "date": "03/2021 to 04/2021",
+        "description": "A dynamic website which offers students to attend quizzes created by their teachers, developed in JavaScript."
+      },
+      {
+        "title": "My Personal Portfolio",
+        "date": "03/2021 to 04/2021",
+        "description": "A website that is my portfolio, developed using javascript and the backend is in json format."
+      }
+    ]
+  }
+}
